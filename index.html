@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seleção Style - Thời Trang Bóng Đá Bồ Đào Nha Đẳng Cấp</title>
+    <title>Seleção Style - Bộ Sưu Tập Áo Đấu Bồ Đào Nha Mới Nhất</title>
     <link rel="stylesheet" href="css/style.css">
     
-    <!-- Thêm phong cách nền Đỏ - Xanh của Bồ Đào Nha và tối ưu giao diện thời trang -->
+    <!-- Phong cách nền Đỏ - Xanh của Bồ Đào Nha và tối ưu giao diện thời trang -->
     <style>
         :root {
             --pt-red: #8C1421;    /* Đỏ rực hoàng gia Bồ Đào Nha */
             --pt-green: #115740;  /* Xanh lá sâu thẳm Seleção */
             --pt-gold: #D4AF37;   /* Vàng cúp vinh quang */
-            --dark-overlay: rgba(15, 15, 15, 0.85);
+            --dark-overlay: rgba(15, 15, 15, 0.9);
         }
 
         body {
@@ -67,6 +67,21 @@
         .primary-button:hover, button:hover {
             background: var(--pt-green);
             border-color: #fff;
+        }
+
+        /* Định dạng phần hiển thị hình ảnh sản phẩm */
+        .gallery-highlight {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .gallery-highlight img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 2px solid var(--pt-gold);
+            margin: 15px auto;
+            display: block;
         }
 
         .swatch:nth-child(1) { background-color: var(--pt-red); color: white; padding: 15px; border-radius: 5px; text-align: center;}
@@ -124,7 +139,7 @@
             </p>
 
             <p class="intro">
-                Không chỉ là những trận cầu rực lửa, sắc đỏ kiêu hãnh và sắc xanh hy vọng của Selecao đã bước lên sàn diễn thời trang, mang lại tinh thần chiến thắng và gu ăn mặc chất lừ cho phái mạnh.
+                Không chỉ là những trận cầu rực lửa, sắc đỏ kiêu hãnh và sắc xanh hy vọng của Seleção đã bước lên sàn diễn thời trang, mang lại tinh thần chiến thắng và gu ăn mặc chất lừ cho phái mạnh.
             </p>
 
             <a class="primary-button" href="#gallery">
@@ -181,14 +196,24 @@
 
         <section id="gallery">
 
-            <h2>Bộ Sưu Tập Khoảnh Khắc Vinh Quang</h2>
+            <h2>Bộ Sưu Tập Khoảnh Khắc & Sản Phẩm</h2>
 
             <div class="gallery-highlight">
-                <!-- Giữ nguyên hình ảnh gốc theo yêu cầu -->
-                <img src="06z_ronaldo_v.webp" alt="Cristiano Ronaldo nâng cúp vô địch" width="500">
-
+                
+                <!-- Gắn hình ảnh mới nhận được vào đầu khu vực sản phẩm nổi bật -->
+                <h3>Mới Nhất: Bộ Sưu Tập Áo Đấu Seleção Cận Cảnh</h3>
+                <img src="images (3).jpg" alt="Bộ sưu tập áo đấu Bồ Đào Nha mới nhất" width="500">
                 <p>
-                    Biểu tượng thời trang thể thao bất diệt: Cristiano Ronaldo nâng cao cúp vô địch trong màu áo huyền thoại.
+                    Cận cảnh phiên bản Player Edition và Men Stadium với các đường vân sóng độc đáo mang đậm tính thời trang đột phá.
+                </p>
+
+                <hr style="border: 0; border-top: 1px solid rgba(214, 175, 55, 0.3); margin: 30px 0;">
+
+                <!-- Giữ nguyên hình ảnh gốc theo yêu cầu -->
+                <h3>Biểu Tượng Bất Diệt</h3>
+                <img src="06z_ronaldo_v.webp" alt="Cristiano Ronaldo nâng cúp vô địch" width="500">
+                <p>
+                    Cristiano Ronaldo nâng cao cúp vinh quang - Nguồn cảm hứng bất tận của mọi dòng sản phẩm thể thao.
                 </p>
 
             </div>
@@ -214,11 +239,11 @@
             </article>
 
             <article class="gallery-item" data-category="cup">
-                Áo đấu sân nhà Đội tuyển Bồ Đào Nha - Classic Red & Green Gold
+                Áo đấu sân nhà Đội tuyển Bồ Đào Nha - Player Edition (Họa tiết sóng rực lửa)
             </article>
 
             <article class="gallery-item" data-category="cup">
-                Áo đấu sân khách Premium Edition - Sắc xanh phong cách
+                Áo đấu sân nhà Đội tuyển Bồ Đào Nha - Men Stadium Classic
             </article>
 
         </section>
