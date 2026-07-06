@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleção Style - Thời Trang Bóng Đá Bồ Đào Nha Đẳng Cấp</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Thêm phong cách nền Đỏ - Xanh của Bồ Đào Nha và tối ưu giao diện thời trang -->
+    <style>
+        :root {
+            --pt-red: #8C1421;    /* Đỏ rực hoàng gia Bồ Đào Nha */
+            --pt-green: #115740;  /* Xanh lá sâu thẳm Seleção */
+            --pt-gold: #D4AF37;   /* Vàng cúp vinh quang */
+            --dark-overlay: rgba(15, 15, 15, 0.85);
+        }
+
+        body {
+            /* Tạo ảnh nền gradient chia nửa Đỏ và Xanh đặc trưng thời thượng */
+            background: linear-gradient(135deg, var(--pt-red) 0%, var(--pt-red) 50%, var(--pt-green) 50%, var(--pt-green) 100%);
+            background-attachment: fixed;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header.site-header {
+            background-color: var(--dark-overlay);
+            border-bottom: 3px solid var(--pt-gold);
+            padding: 15px 20px;
+        }
+
+        .brand {
+            color: var(--pt-gold) !important;
+            font-weight: bold;
+            font-size: 24px;
+            letter-spacing: 2px;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        section {
+            background-color: var(--dark-overlay);
+            margin-bottom: 30px;
+            padding: 30px;
+            border-radius: 12px;
+            border-left: 5px solid var(--pt-gold);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+        }
+
+        .primary-button, button, type="submit" {
+            background: linear-gradient(to right, var(--pt-red), #b31d2d);
+            color: white;
+            border: 1px solid var(--pt-gold);
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .primary-button:hover, button:hover {
+            background: var(--pt-green);
+            border-color: #fff;
+        }
+
+        .swatch:nth-child(1) { background-color: var(--pt-red); color: white; padding: 15px; border-radius: 5px; text-align: center;}
+        .swatch:nth-child(2) { background-color: var(--pt-green); color: white; padding: 15px; border-radius: 5px; text-align: center;}
+        .swatch:nth-child(3) { background-color: var(--pt-gold); color: black; padding: 15px; border-radius: 5px; text-align: center; font-weight: bold;}
+        
+        .swatches {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .gallery-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 6px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="site-header" id="top">
+        <div class="brand">
+            CR7_Seleção_Style
+        </div>
+        <button id="menuToggle">
+            ☰ Bộ Sưu Tập
+        </button>
+        <nav id="mainMenu" class="main-nav">
+            <a href="#hero">Trang chủ</a> 
+            <a href="#about">Xu hướng</a> 
+            <a href="#gallery">Sản phẩm</a> 
+            <a href="#contact">Liên hệ</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero" id="hero">
+
+            <p class="eyebrow">
+                Thời trang sân cỏ & Phong cách đường phố đẳng cấp Châu Âu
+            </p>
+
+            <h1 id="mainTitle">
+                Kiến Tạo Phong Cách - Bản Sắc Nhà Vô Địch
+            </h1>
+
+            <p id="welcomeText">
+                Chào mừng bạn đến với không gian thời trang bóng đá Bồ Đào Nha hiện đại.
+            </p>
+
+            <p class="intro">
+                Không chỉ là những trận cầu rực lửa, sắc đỏ kiêu hãnh và sắc xanh hy vọng của Selecao đã bước lên sàn diễn thời trang, mang lại tinh thần chiến thắng và gu ăn mặc chất lừ cho phái mạnh.
+            </p>
+
+            <a class="primary-button" href="#gallery">
+                Xem Bộ Sưu Tập Đồ Đấu & Streetwear
+            </a>
+
+            <br><br>
+
+            <button id="helloBtn">
+                Nhấn để nhận mã ưu đãi VIP
+            </button>
+
+            <p id="helloResult"></p>
+
+            <br>
+
+            <select id="themeSelect">
+                <option value="">Giao diện mặc định (Đỏ & Xanh)</option>
+                <option value="dark-mode">Nền tối tối giản</option>
+                <option value="warm-mode">Nền ấm hoàng gia</option>
+            </select>
+
+        </section>
+
+        <section class="section about-section" id="about">
+
+            <h2>Khát Vọng Kiệt Tác Thời Trang</h2>
+
+            <button id="toggleAboutBtn">
+                Ẩn/Hiện thông điệp thiết kế
+            </button>
+
+            <div id="aboutContent">
+
+                <p>
+                    Mỗi đường may, phối màu trong bộ sưu tập mới đều lấy cảm hứng từ ý chí thép của Cristiano Ronaldo và niềm tự hào dân tộc Bồ Đào Nha.
+                </p>
+
+                <input type="text" id="searchInput" placeholder="Tìm mẫu áo, phụ kiện thể thao...">
+
+                <ul class="topic-list">
+                    <li class="search-item">
+                        <strong>Áo đấu Pitch-to-Street:</strong> Thiết kế chuẩn thi đấu nhưng tối ưu hoàn hảo cho outfit dạo phố hàng ngày.
+                    </li>
+                    <li class="search-item">
+                        <strong>Chất liệu CR7-Performance:</strong> Sợi vải thể thao cao cấp, thấm hút tối đa và tôn dáng người mặc.
+                    </li>
+                    <li class="search-item">
+                        <strong>Di sản Đỏ - Xanh:</strong> Bản phối màu trường tồn mang đậm tinh thần của những nhà chinh phục đỉnh cao.
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="gallery">
+
+            <h2>Bộ Sưu Tập Khoảnh Khắc Vinh Quang</h2>
+
+            <div class="gallery-highlight">
+                <!-- Giữ nguyên hình ảnh gốc theo yêu cầu -->
+                <img src="06z_ronaldo_v.webp" alt="Cristiano Ronaldo nâng cúp vô địch" width="500">
+
+                <p>
+                    Biểu tượng thời trang thể thao bất diệt: Cristiano Ronaldo nâng cao cúp vô địch trong màu áo huyền thoại.
+                </p>
+
+            </div>
+
+            <div class="filters">
+
+                <button class="filter-btn" data-filter="all">
+                    Tất cả sản phẩm
+                </button>
+
+                <button class="filter-btn" data-filter="cr7">
+                    Bộ sưu tập CR7 Line
+                </button>
+
+                <button class="filter-btn" data-filter="cup">
+                    Áo đấu chính thức
+                </button>
+
+            </div>
+
+            <article class="gallery-item" data-category="cr7">
+                Áo khoác Bomber Seleção phiên bản giới hạn - Đỏ Crimson
+            </article>
+
+            <article class="gallery-item" data-category="cup">
+                Áo đấu sân nhà Đội tuyển Bồ Đào Nha - Classic Red & Green Gold
+            </article>
+
+            <article class="gallery-item" data-category="cup">
+                Áo đấu sân khách Premium Edition - Sắc xanh phong cách
+            </article>
+
+        </section>
+
+        <section id="style-guide">
+
+            <h2>Bảng phong cách phối màu thời trang Seleção</h2>
+
+            <div class="swatches">
+
+                <div class="swatch">
+                    Đỏ Bồ Đào Nha (Chính)
+                </div>
+
+                <div class="swatch">
+                    Xanh Lá Sân Cỏ (Nhấn)
+                </div>
+
+                <div class="swatch">
+                    Vàng Hoàng Gia (Phụ trợ)
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Đăng ký nhận thông tin bộ sưu tập mới</h2>
+            <form id="contactForm">
+                <input type="text" id="fullName" placeholder="Họ và tên của bạn">
+                <br><br>
+                <input type="email" id="email" placeholder="Địa chỉ Email">
+                <br><br>
+                <button type="submit">
+                    Nhận Pre-order Ưu Đãi
+                </button>
+
+            </form>
+            <p id="formMessage"></p>
+        </section>
+
+    </main>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
